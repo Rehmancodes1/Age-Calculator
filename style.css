@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(221,151,0);
+background: linear-gradient(90deg, rgba(221,151,0,1) 0%, rgba(3,0,48,1) 67%, rgba(3,0,48,1) 96%);
+    color: white;
+    padding: 10px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin: 10% auto;
+}
+
+.calculator h1 {
+    font-size: 5rem;
+    color: #030030;
+}
+
+.calculator h1 span {
+    color: #f1a501;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+    padding: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.input-box input {
+    flex: 1;
+    margin-right: 23px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 6px;
+    position: relative;
+}
+
+#btn {
+    padding: 18px 20px;
+    font-weight: 500;
+    background: #f1a501 ;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+}
+
+#result {
+    font-size: 1.6rem;
+}
+
+#result span {
+    color: #f1a501;
+
+}
+
+@media screen and (max-width: 800px) {
+    .calculator h1 {
+        font-size: 2rem;
+    }
+
+    .input-box {
+        padding: 3%;
+        width: 60vw;
+        flex-wrap: wrap;
+    }
+
+    .input-box input {
+        padding: 1vw;
+        font-size: 0.8rem;
+    }
+
+    #btn {
+        padding: 1vw;
+        font-size: 0.8rem;
+    }
+
+    #result {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .input-box {
+        border-radius: 5px;
+        width: 70vw;
+    }
+
+    .input-box input {
+        padding: 2%;
+        font-size: 0.5rem;
+        margin-right: 5px;
+        border-radius: 4px;
+    }
+
+    #btn {
+        padding: 2%;
+        font-size: 0.5rem;
+        border-radius: 4px;
+    }
+
+    #result {
+        font-size: 1rem;
+        display: block;
+        width: 60vw;
+        flex-wrap: wrap;
+    }
+
+    .input-box input::-webkit-calendar-picker-indicator {
+        background-size: 0%;
+    }
+
+    .container h1 {
+        margin: -10px;
+    }
+}
